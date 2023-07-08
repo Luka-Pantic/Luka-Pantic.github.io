@@ -142,18 +142,21 @@
     <scritp src="https://smtpjs.com/v3/smtp.js"></scritp>
     <script>
       function sendMail(){
-        Email.send({
-        Host : "smtp.office365.com",
-        Username : "luka.pantic0504@outlook.com",
-        Password : "Analuka5420",
-        To : 'luka.pantic0504@outlook.com',
-        From : document.getElementById("email").value,
-        Subject : "This is the subject",
-        Body : "And this is the body"
-        }).then(
-          message => alert(message)
-        );
-    }
+        var name= document.getElementById("name").value;
+        var surname=document.getElementById("surname").value;
+        var email=document.getElementById("email").value;
+        var message=document.getElementById("message").value;
+
+        var mailtoLink="mailto:luka.pantic0504@outlook.com" +
+        "?subject=" + encodeURIComponent("Contact Form Submission")+
+        "&body=" + encodeURIComponent("Name: " + name + "\n" +
+        "Surname: " + surname + "\n" +
+        "Email: " + email + "\n" +
+        "Message: " + message);
+
+        window.open(mailtoLink);
+        
+      }
 
     </script>
     
