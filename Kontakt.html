@@ -69,10 +69,10 @@
           <div class="col-md-6">
             <form onsubmit="sendMail(); reset(); return false;">
               <div class="form-group">
-                <input type="text" id="name" name="name" class="form-control" placeholder="Name...">
+                <input type="text" id="name" name="surname" class="form-control" placeholder="Name...">
               </div>
               <div class="form-group">
-                <input type="text" id="surname" name="surname" class="form-control" placeholder="Vorname...">
+                <input type="text" id="surname" name="name" class="form-control" placeholder="Vorname...">
               </div>
               <div class="form-group">
                 <input type="text" id="email" name="email" class="form-control" placeholder="Email...">
@@ -149,10 +149,10 @@
 
         var mailtoLink="mailto:luka.pantic0504@outlook.com" +
         "?subject=" + encodeURIComponent("Contact Form Submission")+
-        "&body=" + encodeURIComponent("Name: " + name + "\n" +
-        "Vorname: " + surname + "\n" +
+        "&body=" + encodeURIComponent("Name: " + surname + "\n" +
+        "Vorname: " + name + "\n" +
         "Email: " + email + "\n" +
-        "Message: " + message);
+        "Nachricht: " + message);
 
         window.open(mailtoLink);
         
